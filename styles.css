@@ -1,15 +1,151 @@
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif; margin: 24px; line-height: 1.6; }
-h1 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-.card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-label { display:block; font-weight:600; margin-top: 8px; }
-input[type="text"] { width: 100%; max-width: 560px; padding: 10px 12px; border-radius: 8px; border: 1px solid #ccc; }
-button { cursor: pointer; border: none; border-radius: 999px; padding: 10px 16px; margin-top: 12px; }
-button.primary { background: #111; color:#fff; }
-button.ghost { background: #f4f4f5; }
-.row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
-.muted { color:#666; font-size: 0.9rem; }
-.error { color:#b00020; white-space: pre-wrap; }
-table { border-collapse: collapse; margin-top: 12px; width: 100%; max-width: 800px; }
-th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
-th { background: #f9fafb; }
-footer { margin-top: 24px; color:#666; font-size: .9rem; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+  margin: 24px;
+  line-height: 1.6;
+  background: #f7f8fa;
+  color: #222;
+}
+h1 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  background: #fff;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 8px;
+}
+input[type="text"] {
+  width: 100%;
+  max-width: 560px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background: #f6f7fa;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+button.primary {
+  background: #111;
+  color: #fff;
+}
+button.ghost {
+  background: #f4f4f5;
+  color: #222;
+}
+button:hover {
+  background: #e0e7ff;
+  color: #111;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+.error {
+  color: #b00020;
+  white-space: pre-wrap;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 12px;
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  text-align: left;
+}
+th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+footer {
+  margin-top: 24px;
+  color: #666;
+  font-size: .9rem;
+}
+#popup {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 16px;
+  min-width: 280px;
+  max-width: 90vw;
+  transition: box-shadow 0.2s;
+  background: #fff;
+}
+#popup h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+#popup-members div {
+  background: #f6f7fa;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 1rem;
+}
+#popup-members div:hover {
+  background: #e0e7ff;
+}
+#popup button {
+  margin-top: 16px;
+  background: #e5e7eb;
+  color: #333;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+#popup button:hover {
+  background: #d1d5db;
+}
+#output {
+  margin-top: 16px;
+  min-height: 32px;
+}
+#output div {
+  display: inline-block;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 6px 6px 0 0;
+  font-weight: 500;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  font-size: 1rem;
+}

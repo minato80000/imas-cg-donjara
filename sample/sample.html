@@ -3,19 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>im@sparql|2人が所属しているユニット検索</title>
-  <link rel="stylesheet" href="sample\styles.css" />
+  <title>im@sparql|候補から選び、候補内のみで構成されるユニット検索</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="card">
-    <h1>im@sparql|2人が所属しているユニット検索</h1>
-    <p class="muted">2人のアイドル名を入力し、「検索」を押すと、その2人が<strong>両方とも</strong>所属しているユニットを返します。</p>
+    <h1>im@sparql|候補限定ユニット検索</h1>
+    <p class="muted">
+      候補リスト(1行1名)を入力 →「候補を反映」でチェックボックス生成 →
+      必ず含めたいメンバーにチェック →「検索」。
+      <br>結果は「<b>チェックした人を必ず含み、かつメンバー全員が候補リスト内に収まる</b>」ユニットのみ表示します（メンバー表示は日本語ラベルのみ）。
+    </p>
 
-    <label for="nameA">名前①（例：天海春香）</label>
-    <input id="nameA" type="text" placeholder="天海春香" />
+    <label for="pool">候補リスト(1行に1名/日本語)</label>
+    <textarea id="pool" rows="6" placeholder="天海春香&#10;如月千早&#10;星井美希"></textarea>
 
-    <label for="nameB">名前②（例：如月千早）</label>
-    <input id="nameB" type="text" placeholder="如月千早" />
+    <div class="row">
+      <button id="reflect" class="ghost">候補を反映</button>
+      <span id="poolNote" class="muted"></span>
+    </div>
+
+    <div id="poolList" class="chiplist" aria-label="候補から選択"></div>
 
     <div class="row">
       <button id="run" class="primary">検索</button>
@@ -28,10 +36,10 @@
   </div>
 
   <footer>
-    データ: <a href="https://sparql.crssnky.xyz/imas/" target="_blank" rel="noopener">im@sparql</a>（SPARQLエンドポイント） |
+    データ: <a href="https://sparql.crssnky.xyz/imas/" target="_blank" rel="noopener">im@sparql</a> |
     エンドポイント: <code>https://sparql.crssnky.xyz/spql/imas/query</code>
   </footer>
 
-  <script src="sample\script.js" defer></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>

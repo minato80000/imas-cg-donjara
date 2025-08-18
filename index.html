@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGドンジャラNEO ユニット検索</title>
 </head>
+
 <body>
     <div class="card">
         <h1>手牌から作れそうなユニットを検索</h1>
 
         <h2>手牌</h2>
-        <input id="input">
-        <button onclick="cuteBtn_clicked()">キュート</button>
-        <button onclick="coolBtn_clicked()">クール</button>
-        <button onclick="passionBtn_clicked()">パッション</button>
-        <div id ="output"></div>
+
+        <div class="row">
+            <button onclick="cuteBtn_clicked()">キュート</button>
+            <button onclick="coolBtn_clicked()">クール</button>
+            <button onclick="passionBtn_clicked()">パッション</button>
+        </div>
+        <div id="popup_cute" style="display:none;position:fixed;top:30%;left:50%;transform:translate(-50%,-50%);
+  background:#fff;border:1px solid #ccc;padding:20px;z-index:1000;min-width:280px;">
+            <h3>メンバーを選択</h3>
+            <div id="popup-members_cute" style="max-height:260px;overflow-y:auto;padding-right:4px;">
+                <!-- メンバーリストがここに表示されます -->
+            </div>
+            <button onclick="closePopup()">閉じる</button>
+        </div>
+        <div id="output"></div>
 
 
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
