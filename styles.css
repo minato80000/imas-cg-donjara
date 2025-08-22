@@ -156,6 +156,11 @@ footer {
   background: #fff;
   border: 1px solid #e5e7eb;
 }
+.idol-card span {
+  font-size: 0.95rem;
+  color: #222;
+  text-align: center;
+}
 #myHand_output div {
   display: inline-block;
   background: #f3f4f6;

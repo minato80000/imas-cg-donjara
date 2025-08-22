@@ -88,10 +88,10 @@ function renderHand() {
     img.onerror = function () {
       img.src = "idols/noimage.png";
     };
-    // const span = document.createElement("span");
-    // span.textContent = name;
+    const span = document.createElement("span");
+    span.textContent = name;
     div.appendChild(img);
-    // div.appendChild(span);
+    div.appendChild(span);
     output.appendChild(div);
   });
 }
