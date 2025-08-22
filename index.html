@@ -15,15 +15,14 @@
         <h2>手牌</h2>
 
         <div id="myHand_output"></div>
-        <div class="row">
+        <div class="nan">
             <button onclick="cuteBtn_clicked()">キュート</button>
             <button onclick="coolBtn_clicked()">クール</button>
             <button onclick="passionBtn_clicked()">パッション</button>
         </div>
-        <div id="popup" style="display:none;position:fixed;top:30%;left:50%;transform:translate(-50%,-50%);
-  background:#fff;border:1px solid #ccc;padding:20px;z-index:1000;min-width:280px;">
+        <div id="popup">
             <h3>メンバーを選択</h3>
-            <div id="popup-members" style="max-height:260px;overflow-y:auto;padding-right:4px;">
+            <div id="popup-members">
                 <!-- メンバーリストがここに表示されます -->
             </div>
             <button onclick="closePopup()">閉じる</button>

@@ -94,12 +94,16 @@ footer {
   font-size: .9rem;
 }
 #popup {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  border-radius: 16px;
-  min-width: 280px;
-  max-width: 90vw;
-  transition: box-shadow 0.2s;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  min-width: 280px;
 }
 #popup h3 {
   margin-top: 0;
@@ -107,14 +111,10 @@ footer {
   font-weight: 600;
   color: #333;
 }
-#popup-members div {
-  background: #f6f7fa;
-  border-radius: 8px;
-  padding: 8px 12px;
-  margin: 6px 0;
-  cursor: pointer;
-  transition: background 0.15s;
-  font-size: 1rem;
+#popup-members {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 #popup-members div:hover {
   background: #e0e7ff;
