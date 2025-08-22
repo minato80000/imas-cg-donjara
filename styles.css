@@ -19,6 +19,9 @@ h1 {
   padding: 16px;
   margin-bottom: 16px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 文字・ボタン・手牌を中央揃え */
 }
 
 label {
@@ -69,6 +72,7 @@ button:hover {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+  justify-content: center; /* ボタンを中央揃え */
   margin-bottom: 12px;
 }
 
