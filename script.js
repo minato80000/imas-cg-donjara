@@ -68,17 +68,30 @@ function addMember(name) {
   renderHand();
 }
 
+function getIdolImage(name) {
+  return `idols/${name}.png`
+}
+
 function renderHand() {
   const output = document.getElementById("myHand_output");
   output.innerHTML = "";
   myHand.forEach(name => {
     const div = document.createElement("div");
-    div.textContent = name;
+    div.className = "idol-card";
     div.onclick = function () {
-      div.remove();
       myHand = myHand.filter(n => n !== name);
       renderHand();
     };
+    const img = document.createElement("img");
+    img.src = getIdolImage(name);
+    img.alt = name;
+    img.onerror = function () {
+      img.src = "idols/noimage.png";
+    };
+    // const span = document.createElement("span");
+    // span.textContent = name;
+    div.appendChild(img);
+    // div.appendChild(span);
     output.appendChild(div);
   });
 }

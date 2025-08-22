@@ -133,11 +133,30 @@ footer {
 #popup button:hover {
   background: #d1d5db;
 }
-#output {
-  margin-top: 16px;
-  min-height: 32px;
+#myHand_output {
+  display: flex;
+  justify-content: flex-start; /* 左寄せに変更 */
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
 }
-#output div {
+.idol-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.idol-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 0%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 4px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+#myHand_output div {
   display: inline-block;
   background: #f3f4f6;
   border-radius: 8px;
