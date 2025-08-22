@@ -113,7 +113,7 @@ footer {
 #popup {
   display: none;
   position: fixed;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
@@ -131,7 +131,7 @@ footer {
 }
 
 #popup-members {
-  max-height: 260px;
+  max-height: 130px;
   overflow-y: auto;
   padding-right: 4px;
 }
