@@ -5,24 +5,28 @@ body {
   background: #f7f8fa;
   color: #222;
 }
+
 h1 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
+
 .card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
 }
+
 label {
   display: block;
   font-weight: 600;
   margin-top: 8px;
 }
+
 input[type="text"] {
   width: 100%;
   max-width: 560px;
@@ -33,6 +37,7 @@ input[type="text"] {
   margin-bottom: 10px;
   background: #f6f7fa;
 }
+
 button {
   cursor: pointer;
   border: none;
@@ -43,33 +48,40 @@ button {
   font-weight: 500;
   transition: background 0.15s, color 0.15s;
 }
+
 button.primary {
   background: #111;
   color: #fff;
 }
+
 button.ghost {
   background: #f4f4f5;
   color: #222;
 }
+
 button:hover {
   background: #e0e7ff;
   color: #111;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
   margin-bottom: 12px;
 }
+
 .muted {
   color: #666;
   font-size: 0.9rem;
 }
+
 .error {
   color: #b00020;
   white-space: pre-wrap;
 }
+
 table {
   border-collapse: collapse;
   margin-top: 12px;
@@ -79,20 +91,25 @@ table {
   border-radius: 8px;
   overflow: hidden;
 }
-th, td {
+
+th,
+td {
   border: 1px solid #e5e7eb;
   padding: 8px 10px;
   text-align: left;
 }
+
 th {
   background: #f9fafb;
   font-weight: 600;
 }
+
 footer {
   margin-top: 24px;
   color: #666;
   font-size: .9rem;
 }
+
 #popup {
   display: none;
   position: fixed;
@@ -105,20 +122,24 @@ footer {
   z-index: 1000;
   min-width: 280px;
 }
+
 #popup h3 {
   margin-top: 0;
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
 }
+
 #popup-members {
   max-height: 260px;
   overflow-y: auto;
   padding-right: 4px;
 }
+
 #popup-members div:hover {
   background: #e0e7ff;
 }
+
 #popup button {
   margin-top: 16px;
   background: #e5e7eb;
@@ -130,20 +151,25 @@ footer {
   cursor: pointer;
   transition: background 0.15s;
 }
+
 #popup button:hover {
   background: #d1d5db;
 }
+
 #myHand_output {
   display: flex;
-  justify-content: flex-start; /* 左寄せで横並び */
+  justify-content: flex-start;
+  /* 左寄せで横並び */
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 16px;
 }
+
 .idol-card {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 画像と名前を中央揃えに */
+  align-items: center;
+  /* 画像と名前を中央揃えに */
   cursor: pointer;
   background: #f3f4f6;
   border-radius: 8px;
@@ -151,19 +177,20 @@ footer {
   margin: 0px 0px 0 0;
   font-weight: 500;
   color: #222;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   font-size: 1rem;
 }
+
 .idol-card img {
   width: 64px;
   height: 64px;
   object-fit: contain;
   border-radius: 0%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   margin-bottom: 4px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: transparent;
+  border: none;
 }
+
 .idol-card span {
   font-size: 0.95rem;
   color: #222;
