@@ -135,7 +135,7 @@ footer {
 }
 #myHand_output {
   display: flex;
-  justify-content: flex-start; /* 左寄せに変更 */
+  justify-content: flex-start; /* 左寄せで横並び */
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 16px;
@@ -143,8 +143,16 @@ footer {
 .idol-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* 画像と名前を中央揃えに */
   cursor: pointer;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 6px 6px 0 0;
+  font-weight: 500;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  font-size: 1rem;
 }
 .idol-card img {
   width: 64px;
@@ -160,15 +168,5 @@ footer {
   font-size: 0.95rem;
   color: #222;
   text-align: center;
-}
-#myHand_output div {
-  display: inline-block;
-  background: #f3f4f6;
-  border-radius: 8px;
-  padding: 8px 14px;
-  margin: 6px 6px 0 0;
-  font-weight: 500;
-  color: #222;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  font-size: 1rem;
+  margin: 0;
 }
