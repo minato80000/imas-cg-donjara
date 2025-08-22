@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGドンジャラNEO ユニット検索</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -13,6 +14,7 @@
 
         <h2>手牌</h2>
 
+        <div id="myHand_output"></div>
         <div class="row">
             <button onclick="cuteBtn_clicked()">キュート</button>
             <button onclick="coolBtn_clicked()">クール</button>
@@ -26,8 +28,10 @@
             </div>
             <button onclick="closePopup()">閉じる</button>
         </div>
-        <div id="output"></div>
-
+        <div>
+            <button onclick="searchUnits()">検索</button>
+        </div>
+        <div id="unit_result" style="margin-top:24px;"></div>
 
     </div>
 
