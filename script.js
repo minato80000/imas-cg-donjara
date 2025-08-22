@@ -137,9 +137,14 @@ function renderUnitTable(results) {
     container.innerHTML = "<div>該当ユニットはありません。</div>";
     return;
   }
-  let html = `<table><thead><tr><th>ユニット名</th><th>メンバー</th></tr></thead><tbody>`;
+  // ユニット名で重複排除
+  const unique = {};
   results.forEach(r => {
-    html += `<tr><td>${r.unit}</td><td>${r.members}</td></tr>`;
+    unique[r.unit] = r.members;
+  });
+  let html = `<table><thead><tr><th>ユニット名</th><th>メンバー</th></tr></thead><tbody>`;
+  Object.entries(unique).forEach(([unit, members]) => {
+    html += `<tr><td>${unit}</td><td>${members}</td></tr>`;
   });
   html += `</tbody></table>`;
   container.innerHTML = html;

@@ -147,8 +147,8 @@ footer {
   cursor: pointer;
   background: #f3f4f6;
   border-radius: 8px;
-  padding: 8px 14px;
-  margin: 6px 6px 0 0;
+  padding: 0px 0px;
+  margin: 0px 0px 0 0;
   font-weight: 500;
   color: #222;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
