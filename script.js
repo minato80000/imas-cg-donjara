@@ -115,6 +115,7 @@ async function searchUnits() {
     results = results.concat(data);
   }
   renderUnitTable(results);
+  closePopup();
 }
 
 // SPARQL APIからデータ取得
