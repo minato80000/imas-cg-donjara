@@ -101,6 +101,12 @@ function closePopup() {
 }
 
 async function searchUnits() {
+  closePopup();
+  const container = document.getElementById("unit_result");
+  if (container) {
+    container.innerHTML = "<div>検索中...</div>"; // 検索中表示
+  }
+
   const pairs = [];
   for (let i = 0; i < myHand.length; i++) {
     for (let j = i + 1; j < myHand.length; j++) {
@@ -115,7 +121,6 @@ async function searchUnits() {
     results = results.concat(data);
   }
   renderUnitTable(results);
-  closePopup();
 }
 
 // SPARQL APIからデータ取得
